@@ -1,0 +1,68 @@
+# JavaScript / Electron dependencies and generated builds
+node_modules/
+release/
+dist/
+out/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Python environments, caches, and local bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local model weights and private runtime files (keep these out of GitHub)
+models/
+model-cache/
+checkpoints/
+*.onnx
+*.onnx.json
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.model
+*.argosmodel
+
+# Local recordings, exports, and user workspace
+imports/
+outputs/
+exports/
+recordings/
+VoiceStudio-data/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.opus
+*.webm
+*.mp4
+*.mov
+*.mkv
+*.srt
+*.pdf
+*.docx
+*.rtf
+*.odt
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
