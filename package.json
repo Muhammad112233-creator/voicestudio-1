@@ -1,0 +1,17 @@
+{
+  "name": "voicestudio-local",
+  "productName": "VoiceStudio",
+  "version": "0.1.0",
+  "description": "A privacy-first, local desktop studio for speech, voice profiles, transcription, dubbing, and audio tools.",
+  "author": "VoiceStudio contributors",
+  "license": "MIT",
+  "main": "main.cjs",
+  "private": false,
+  "scripts": {
+    "start": "electron .",
+    "preview": "node preview.cjs"
+  },
+  "devDependencies": {
+    "electron": "^44.0.0"
+  }
+}

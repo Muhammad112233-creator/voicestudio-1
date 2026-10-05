@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoiceStudio Mini Dictation</title>
+  <link rel="stylesheet" href="widget.css">
+  <script src="widget.js" defer></script>
+</head>
+<body>
+  <main class="widget-shell">
+    <header class="widget-head"><div class="widget-brand"><span class="widget-logo">⌁</span><div><strong>VoiceStudio</strong><small>MINI DICTATION · LOCAL</small></div></div><button id="closeWidget" title="Close widget" aria-label="Close widget">×</button></header>
+    <section class="widget-main">
+      <div class="widget-orb" id="widgetOrb"><span>⌁</span></div>
+      <div class="widget-status" id="widgetStatus">Ready when you are</div>
+      <div class="widget-hint" id="widgetHint">Record, transcribe locally, then paste into any app.</div>
+      <div class="widget-timer" id="widgetTimer">00:00</div>
+      <div class="widget-controls"><button class="widget-record" id="recordButton"><span class="record-dot"></span><span id="recordLabel">Start recording</span></button><button class="widget-copy" id="copyButton" disabled>Copy text</button></div>
+      <div class="widget-progress" id="progressWrap"><i id="progressBar"></i></div>
+      <div class="widget-result" id="widgetResult" aria-live="polite">Your transcript will appear here.</div>
+      <div class="widget-foot"><span><i></i> No cloud · no account · no API key</span><span>Ctrl/⌘ + Shift + Space</span></div>
+    </section>
+  </main>
+</body>
+</html>

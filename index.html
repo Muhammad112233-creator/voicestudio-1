@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>VoiceStudio — local voice tools</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+  <div class="app-frame">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M11 18v4M16 12v16M21 8v24M26 13v14M31 17v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="21" cy="20" r="17" stroke="currentColor" stroke-opacity=".18"/></svg>
+        </div>
+        <div class="brand-name">voice<span>studio</span></div>
+        <span class="brand-local">LOCAL</span>
+      </div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="primary-nav" id="primaryNav">
+        <button class="nav-item active" data-page="launchpad"><span class="nav-icon">⌂</span><span>Launchpad</span></button>
+        <button class="nav-item" data-page="voice-lab"><span class="nav-icon">◉</span><span>Voice lab</span><span class="nav-new">NEW</span></button>
+        <button class="nav-item" data-page="dictation"><span class="nav-icon">⌁</span><span>Dictation</span></button>
+        <button class="nav-item" data-page="dubbing"><span class="nav-icon">▣</span><span>Dubbing</span></button>
+        <button class="nav-item" data-page="audiobook"><span class="nav-icon">▤</span><span>Audiobook</span></button>
+        <button class="nav-item" data-page="transcribe"><span class="nav-icon">≋</span><span>Transcribe & translate</span></button>
+        <button class="nav-item" data-page="pitch"><span class="nav-icon">♬</span><span>Pitch & audio</span></button>
+        <div class="nav-divider"></div>
+        <button class="nav-item" data-page="gallery"><span class="nav-icon">◌</span><span>Voice gallery</span><span class="nav-count" id="voiceCount">0</span></button>
+        <button class="nav-item" data-page="projects"><span class="nav-icon">▧</span><span>Projects & jobs</span></button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="privacy-card">
+          <span class="privacy-orb"></span>
+          <div><strong>Private by design</strong><span>Processing stays on this device</span></div>
+          <span class="lock-icon">⌑</span>
+        </div>
+        <button class="nav-item settings-link" data-page="settings"><span class="nav-icon">⚙</span><span>Settings & engines</span></button>
+        <div class="sidebar-version">VoiceStudio <span>0.1.0 · local build</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="crumbs"><span>Workspace</span><b>/</b><strong id="pageCrumb">Launchpad</strong></div>
+        <div class="topbar-right">
+          <div class="local-badge"><span class="status-dot"></span><span>LOCAL ONLY</span><i>·</i><span id="runtimeBadge">Engine setup needed</span></div>
+          <button class="icon-button" id="openWidgetTop" title="Open mini dictation widget · Ctrl/⌘+Shift+Space" aria-label="Open mini dictation widget">⌁</button>
+          <button class="icon-button theme-top" id="themeToggle" title="Toggle light or dark theme" aria-label="Toggle theme"><span id="themeGlyph">☼</span></button>
+          <button class="avatar-button" id="openSettingsTop" aria-label="Open settings">VS</button>
+        </div>
+      </header>
+      <section class="content-area" id="pageContent" aria-live="polite"></section>
+      <footer class="app-footer"><span>Offline-first, always.</span><span><span class="footer-dot"></span> No account · No API key · No telemetry</span></footer>
+    </main>
+  </div>
+
+  <input id="filePicker" type="file" hidden>
+  <div id="toastStack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
